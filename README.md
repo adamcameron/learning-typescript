@@ -1,2 +1,3 @@
-# learning-typescript
+# Learning TypeScript
+
 I need to learn TypeScript...
