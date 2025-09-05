@@ -8,7 +8,6 @@ RUN ["apt-get", "install", "-y", "zip", "unzip", "git", "vim"]
 
 RUN ["apt-get", "install", "xdg-utils", "-y"]
 
-
 WORKDIR  /usr/src/app
 COPY package*.json ./
 RUN npm install
