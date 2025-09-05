@@ -1,5 +1,5 @@
-import process from "node:process";
+import process from 'node:process'
 
 export function getNodeVersion(): string {
-    return process.version;
+  return process.version
 }
