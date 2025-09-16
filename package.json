@@ -20,7 +20,7 @@
   "scripts": {
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
-    "test:ui": "vitest --ui --api.host 0.0.0.0",
+    "test:ui": "vitest --ui --coverage --api.host 0.0.0.0",
     "prettier-format": "prettier --config .prettierrc --write 'src/**/*.ts' 'tests/**/*.ts'"
   }
 }
