@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { takesOptionalString } from '@/lt-10/undefined'
 
 describe('Tests of the undefined type', () => {
-  it("is undefined (but not null) if it's declared but not initalised", () => {
+  it("is undefined (but not null) if it's declared but not initialised", () => {
     let testVar
 
     expect(testVar).not.toBe(null)

@@ -26,7 +26,7 @@ describe('String tests', () => {
     expect(result).not.toEqual(42)
   })
 
-  it('demonstrates casting a number to a string using the String construtor', () => {
+  it('demonstrates casting a number to a string using the String constructor', () => {
     const testNumber: number = 42
 
     const result: string = fromNumberUsingStringConstructor(testNumber)
