@@ -1,7 +1,7 @@
 import js from '@eslint/js'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
-import { defineConfig } from 'eslint/config'
+import { defineConfig, globalIgnores } from 'eslint/config'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
 
 export default defineConfig([
@@ -25,6 +25,15 @@ export default defineConfig([
       'no-undef': 'error',
     },
   },
-  tseslint.configs.recommended,
+  tseslint.configs.recommendedTypeChecked,
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
   eslintConfigPrettier,
+  globalIgnores(['dist/', 'node_modules/', '*.{ts,mts}']),
 ])
