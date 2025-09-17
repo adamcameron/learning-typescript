@@ -30,7 +30,7 @@ describe('Symbols tests', () => {
   })
 
   it("can be used to define a class's name as a string", () => {
-    const obj = SymbolsLib.returnsObjectWithToStringTagSymbol()
+    const obj = SymbolsLib.getTestObject()
 
     expect(obj.toString()).toBe('StringRepresentationOfObject')
     expect(Object.prototype.toString.call(obj)).toBe(
@@ -39,7 +39,7 @@ describe('Symbols tests', () => {
   })
 
   it("can be used to define a class's primitive behaviour", () => {
-    const obj = SymbolsLib.returnsObjectWithToPrimitiveSymbol()
+    const obj = SymbolsLib.getTestObject()
 
     expect(+obj).toBe(42)
     expect(String(obj)).toBe('forty-two')
@@ -73,7 +73,7 @@ describe('Symbols tests', () => {
   })
 
   it('can be used to specify an iterator for the object', () => {
-    const obj = SymbolsLib.returnsObjectWithIteratorSymbol()
+    const obj = SymbolsLib.getTestObject()
 
     expect([...obj]).toEqual('StringNameOfClass'.split(''))
   })

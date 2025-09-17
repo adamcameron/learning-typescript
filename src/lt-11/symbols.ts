@@ -6,7 +6,7 @@ export function getNewSymbolFor(key: string): symbol {
   return Symbol.for(key)
 }
 
-/* eslint-disable @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-return, @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-call, @typescript-eslint/no-explicit-any */
 export function callsSymbolConstructor(): any {
   // prettier-ignore
   return new (Symbol as any)() //
@@ -41,11 +41,7 @@ export class SomeClass {
   }
 }
 
-export function returnsObjectWithToStringTagSymbol(): SomeClass {
-  return new SomeClass()
-}
-
-export function returnsObjectWithToPrimitiveSymbol(): SomeClass {
+export function getTestObject(): SomeClass {
   return new SomeClass()
 }
 
@@ -55,8 +51,4 @@ export function getObjectWithSecretProperties(s1: symbol, s2: symbol) {
     [s1]: () => `first secret value (${s1.description})`,
     [s2]: () => `second secret value (${s2.description})`,
   }
-}
-
-export function returnsObjectWithIteratorSymbol(): SomeClass {
-  return new SomeClass()
 }
