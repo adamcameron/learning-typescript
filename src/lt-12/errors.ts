@@ -1,5 +1,5 @@
 export function throwsError(message: string) {
-  throw Error(message)
+  throw new Error(message)
 }
 
 export class MyError extends Error {}
