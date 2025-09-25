@@ -10,7 +10,14 @@ describe('Testing namespaces', () => {
       expect(MaoriNumber.fromValue('two')).toEqual(MaoriNumber.Rua)
     })
     it("won't fetch the method as an 'enum' entry", () => {
-      expect(MaoriNumber.fromValue('fromValue')).toBeUndefined()
+      expect(() => {
+        MaoriNumber.fromValue('fromValue')
+      }).toThrowError('Value "fromValue" is not a valid MaoriNumber')
+    })
+    it("will error if the string doesn't match a MaoriNumber", () => {
+      expect(() => {
+        MaoriNumber.fromValue('rima')
+      }).toThrowError('Value "rima" is not a valid MaoriNumber')
     })
   })
 })
