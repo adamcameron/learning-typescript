@@ -18,7 +18,7 @@
     "vitest": "^3.2.4"
   },
   "scripts": {
-    "test": "vitest",
+    "test": "vitest --typecheck",
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui --coverage --api.host 0.0.0.0",
     "prettier-format": "prettier --config .prettierrc --write 'src/**/*.ts' 'tests/**/*.ts'"
