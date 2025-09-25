@@ -35,5 +35,5 @@ export default defineConfig([
     },
   },
   eslintConfigPrettier,
-  globalIgnores(['dist/', 'node_modules/', '*.{ts,mts}']),
+  globalIgnores(['dist/', 'node_modules/', 'coverage/', '*.{ts,mts}']),
 ])

@@ -26,6 +26,9 @@ docker exec -it learning-typescript-node-1 npx eslint
 
 ```
 docker exec -it learning-typescript-node-1 npx tsc --noEmit
+
+# and watch for changes
+docker exec -it learning-typescript-node-1 npx tsc --watch --noEmit
 ```
 
 ## See code coverage
