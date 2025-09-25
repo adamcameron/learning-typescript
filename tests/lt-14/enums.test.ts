@@ -33,26 +33,26 @@ describe('Tests of enums', () => {
     expect(five.valueOf()).toBe(5)
   })
 
-  it('has an toExponential method', () => {
+  it('has a toExponential method', () => {
     const exp: string = EnumsLib.NaturalNumber.Four.toExponential(2)
 
     expect(exp).toBe('4.00e+0')
   })
 
-  it('has an toString method', () => {
+  it('has a toString method', () => {
     const str: string = EnumsLib.NaturalNumber.Three.toString()
 
     expect(str).toBe('3')
     expect(str).not.toBe(3)
   })
 
-  it('has an toPrecision method', () => {
+  it('has a toPrecision method', () => {
     const str: string = EnumsLib.NaturalNumber.Two.toPrecision(4)
 
     expect(str).toBe('2.000')
   })
 
-  it('has an toPrecision method', () => {
+  it('has a toFixed method', () => {
     const str: string = EnumsLib.NaturalNumber.One.toFixed(4)
 
     expect(str).toBe('1.0000')
