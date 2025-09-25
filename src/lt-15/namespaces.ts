@@ -14,10 +14,13 @@ export namespace MaoriNumber {
 
   export function fromValue(value: string): MaoriNumber {
     const valueAsMaoriNumber: MaoriNumber = value as MaoriNumber
-    const elementName: string =
-      enumKeysOnly[Object.values(MaoriNumber).indexOf(valueAsMaoriNumber)]
-    const typedElementName = elementName as keyof typeof MaoriNumber
+    const index = Object.values(MaoriNumber).indexOf(valueAsMaoriNumber);
+    if (index === -1) {
+      throw new Error(`Value "${value}" is not a valid MaoriNumber`);
+    }
+    const elementName: string = enumKeysOnly[index];
+    const typedElementName = elementName as keyof typeof MaoriNumber;
 
-    return MaoriNumber[typedElementName] as MaoriNumber
+    return MaoriNumber[typedElementName] as MaoriNumber;
   }
 }
