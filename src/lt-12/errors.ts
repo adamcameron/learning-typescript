@@ -32,7 +32,5 @@ export function throwsErrorWithCause(
   causeMessage: string,
   errorMessage: string
 ) {
-  const cause: Error = new Error(causeMessage)
-
-  throw new Error(errorMessage, { cause: cause })
+  throw new Error(errorMessage, { cause: new Error(causeMessage) })
 }
