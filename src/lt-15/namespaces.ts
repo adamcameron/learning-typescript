@@ -7,12 +7,13 @@ export enum MaoriNumber {
 
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace MaoriNumber {
+  const enumKeysOnly = Object.keys(MaoriNumber).filter(
+    (key) =>
+      typeof MaoriNumber[key as keyof typeof MaoriNumber] !== 'function'
+  )
+
   export function fromValue(value: string): MaoriNumber {
     const valueAsMaoriNumber: MaoriNumber = value as MaoriNumber
-    const enumKeysOnly = Object.keys(MaoriNumber).filter(
-      (key) =>
-        typeof MaoriNumber[key as keyof typeof MaoriNumber] !== 'function'
-    )
     const elementName: string =
       enumKeysOnly[Object.values(MaoriNumber).indexOf(valueAsMaoriNumber)]
     const typedElementName = elementName as keyof typeof MaoriNumber
