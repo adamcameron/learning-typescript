@@ -9,7 +9,7 @@ export function getNewSymbolFor(key: string): symbol {
 /* eslint-disable @typescript-eslint/no-unsafe-call, @typescript-eslint/no-explicit-any */
 export function callsSymbolConstructor(): any {
   // prettier-ignore
-  return new (Symbol as any)() //
+  return new (Symbol as any)()
 }
 /* eslint-enable */
 
