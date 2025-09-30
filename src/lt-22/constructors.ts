@@ -14,7 +14,7 @@ export class Numeric {
       this.asNumeric = p1
       return
     }
-    this.asString = (p1 as string) || null
-    this.asNumeric = p2 || null
+    this.asString = (p1 as string) ?? null
+    this.asNumeric = p2 ?? null
   }
 }
