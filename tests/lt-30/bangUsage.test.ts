@@ -47,11 +47,6 @@ describe('Testing definite assignment assertion', () => {
 
       sut.setArrayValue(['tahi', 'rua', 'toru'])
 
-      const n1: number = 1
-      const n2: number = 1
-
-      const b: boolean = n1 == n2
-
       expect(sut.findInArray('wha')).toBeUndefined()
     })
   })
