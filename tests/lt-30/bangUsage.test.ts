@@ -4,21 +4,22 @@ import {
 } from '@/lt-30/bangUsage'
 import { describe, it, expect } from 'vitest'
 
-describe('Testing definite assignment assertion', () => {
-  it('says that an assignment has indeed taken place', () => {
-    const sut: DAAE = new DAAE()
+describe('Testing ! operator for assignment verification', () => {
+  describe('Testing definite assignment assertion', () => {
+    it('says that an assignment has indeed taken place', () => {
+      const sut: DAAE = new DAAE()
 
-    sut.setStringValue('NOT_NULL')
+      sut.setStringValue('NOT_NULL')
 
-    expect(sut.double()).toEqual('NOT_NULLNOT_NULL')
+      expect(sut.double()).toEqual('NOT_NULLNOT_NULL')
+    })
+
+    it('will break at runtime if an assignment has not indeed taken place', () => {
+      const sut: DAAE = new DAAE()
+
+      expect(sut.double()).toBeNaN()
+    })
   })
-
-  it('will break at runtime if an assignment has not indeed taken place', () => {
-    const sut: DAAE = new DAAE()
-
-    expect(sut.double()).toBeNaN()
-  })
-
   describe('Testing non-null assertion operator', () => {
     it('says that the variable definitely is not null', () => {
       const sut: NNAE = new NNAE()

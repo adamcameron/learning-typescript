@@ -1,10 +1,3 @@
-export interface LooseObject {
-  [key: string]: any // eslint-disable-line @typescript-eslint/no-explicit-any
-}
-
-export type NullableString = string | null
-export type NullableLooseObject = LooseObject | null
-
 export class DefiniteAssignmentAssertionExample {
   private s!: string // without ! we get "Property 's' has no initializer and is not definitely assigned in the constructor"
 
