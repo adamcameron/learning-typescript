@@ -1,7 +1,7 @@
 import { Numeric } from '@/lt-22/constructors'
 import { describe, it, expect } from 'vitest'
 
-describe('tests of a constrcutors', () => {
+describe('tests of constructors', () => {
   it('can be instantiated with a no-arg constructor', () => {
     const o: Numeric = new Numeric()
 
