@@ -34,7 +34,7 @@ describe('Tests of class expressions', () => {
     expect(o).toBeInstanceOf(c)
   })
 
-  it('can be be used immediately to create an object', () => {
+  it('can be used immediately to create an object', () => {
     const o: MyClassExpressionInterface = ObjectFactory.getObject('TEST_VALUE')
 
     expect(o.getValue()).toEqual('TEST_VALUE')
