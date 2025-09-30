@@ -1,7 +1,7 @@
 import { Something, Account, NaturalNumber } from '@/lt-24/accessorMethods'
 import { describe, it, expect } from 'vitest'
 
-describe('tests of a accessor methods', () => {
+describe('tests of accessor methods', () => {
   it('can have accessor methods on private properties', () => {
     const o: Something = new Something()
     o.accessibleProperty = 'accessiblePropertyValue'
