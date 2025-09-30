@@ -1,7 +1,7 @@
 import { MaoriColour, IrishWeekday } from '@/lt-20/abstract'
 import { describe, it, expect } from 'vitest'
 
-describe('Tests of abtract class & method', () => {
+describe('Tests of abstract class & method', () => {
   it("demonstrates an abstract method's implementation", () => {
     const orange: MaoriColour = new MaoriColour('orange', 'karaka')
     expect(orange.getTranslation()).toEqual(
