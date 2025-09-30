@@ -3,6 +3,7 @@ import {
   GeneralGreeting,
   Person,
   translate,
+  SomeProperties,
 } from '@/lt-14/literalTypes'
 import { describe, it, expect } from 'vitest'
 
@@ -86,5 +87,18 @@ describe('Literal type tests', () => {
     expect(translation).toBe('Hello world translated into IE')
 
     //translation = translate('Hello world', 'PL') // Argument of type '"PL"' is not assignable to parameter of type 'SupportedLanguages'
+  })
+
+  it("can be used to specify a type of 'property'", () => {
+    const o: SomeProperties = new SomeProperties()
+
+    expect(o.getAnyPropByName('ie')).toBe('trí')
+  })
+
+  it('can be subverted at runtime', () => {
+    const o: SomeProperties = new SomeProperties()
+
+    const runtimeKey: string = 'pl'
+    expect(o.getAnyPropByName(runtimeKey as 'mi' | 'en' | 'ie')).toBeUndefined()
   })
 })
