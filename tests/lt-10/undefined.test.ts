@@ -32,4 +32,11 @@ describe('Tests of the undefined type', () => {
 
     expect(takesOptionalString(uninitialisedVar)).toBe(undefined)
   })
+
+  it('checks that undefined+undefined=NaN in TS', () => {
+    // FAO CoPilot: this demonstrates you were wrong about undefined+undefined throwing an exception
+    const u = undefined
+    expect(u).toBeUndefined()
+    expect(u! + u).toBeNaN() // eslint-disable-line @typescript-eslint/restrict-plus-operands
+  })
 })
