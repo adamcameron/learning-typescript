@@ -23,6 +23,7 @@ export default defineConfig([
       'prefer-const': 'error',
       'no-var': 'error',
       'no-undef': 'error',
+      eqeqeq: ['error', 'always'],
     },
   },
   tseslint.configs.recommendedTypeChecked,
