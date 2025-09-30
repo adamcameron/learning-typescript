@@ -10,7 +10,7 @@ describe('tests readonly properties', () => {
     expect(four.translation).toEqual('whā')
   })
 
-  it('shows that one cannot chane a readonly property', () => {
+  it('shows that one cannot change a readonly property', () => {
     const five: ReadonlyTranslatedNumber = new ReadonlyTranslatedNumber(
       5,
       'rima'
