@@ -20,12 +20,12 @@ describe('tests of accessor methods', () => {
     expect(zachary.fullName).toBe('Zachary Lynch')
   })
 
-  it('can have write-only accessors', async () => {
+  it('can have write-only accessors', () => {
     const zachary: Account = new Account('Zachary', 'Lynch')
 
     zachary.password = '123letmein'
 
-    expect(await zachary.placateCompiler()).not.toBeNull()
+    expect(zachary.placateCompiler()).not.toBeNull()
   })
 
   it('can have validation on the setter', () => {

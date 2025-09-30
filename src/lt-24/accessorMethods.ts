@@ -1,5 +1,6 @@
+import { createHash } from 'crypto'
+
 type NullableString = string | null
-type NullableStringPromise = Promise<string> | null
 type NullableNumber = number | null
 
 export class Something {
@@ -29,7 +30,7 @@ export class Something {
 }
 
 export class Account {
-  private _hashedPassword: NullableStringPromise = null
+  private _hashedPassword: NullableString = null
 
   constructor(
     private firstName: string,
@@ -44,18 +45,11 @@ export class Account {
     this._hashedPassword = this.hashPassword(value)
   }
 
-  private async hashPassword(password: string) {
-    const encoder = new TextEncoder()
-    const data = encoder.encode(password)
-    const hash = await crypto.subtle.digest('SHA-256', data)
-    const hashAsString = Array.from(new Uint8Array(hash))
-      .map((b) => b.toString(16).padStart(2, '0'))
-      .join('')
-
-    return hashAsString
+  private hashPassword(password: string): string {
+    return createHash('sha256').update(password).digest('hex')
   }
 
-  placateCompiler(): NullableStringPromise {
+  placateCompiler(): NullableString {
     return this._hashedPassword
   }
 }
