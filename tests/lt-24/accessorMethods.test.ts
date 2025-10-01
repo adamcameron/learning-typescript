@@ -15,13 +15,13 @@ describe('tests of accessor methods', () => {
   })
 
   it('can have read-only accessors', () => {
-    const zachary: Account = new Account('Zachary', 'Lynch')
+    const zachary: Account = new Account('Zachary', 'Cameron Lynch')
 
-    expect(zachary.fullName).toBe('Zachary Lynch')
+    expect(zachary.fullName).toBe('Zachary Cameron Lynch')
   })
 
   it('can have write-only accessors', () => {
-    const zachary: Account = new Account('Zachary', 'Lynch')
+    const zachary: Account = new Account('Zachary', 'Cameron Lynch')
 
     zachary.password = '123letmein'
 
