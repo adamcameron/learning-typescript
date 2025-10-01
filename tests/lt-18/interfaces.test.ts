@@ -102,13 +102,13 @@ describe('Tests of interfaces', () => {
   it('can implement hybrid types', () => {
     const testLogger: Logger = getLogger()
 
-    const withDefaultLevel: string = testLogger('Log mesage')
+    const withDefaultLevel: string = testLogger('Log message')
 
-    expect(withDefaultLevel).toEqual('[info] Log mesage')
+    expect(withDefaultLevel).toEqual('[info] Log message')
 
     testLogger.setLevel('debug')
-    const withDebugLevel: string = testLogger('Log mesage')
+    const withDebugLevel: string = testLogger('Log message')
 
-    expect(withDebugLevel).toEqual('[debug] Log mesage')
+    expect(withDebugLevel).toEqual('[debug] Log message')
   })
 })
