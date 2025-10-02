@@ -1,21 +1,26 @@
 const maoriNumbers = ['tahi', 'rua', 'toru', 'wha']
-let current = 0
+
 
 function maoriSequence(
   target: typeof Number,
   context: ClassDecoratorContext<typeof Number>
 ) {
-  function* generator() {
-    while (current < maoriNumbers.length) {
-      yield maoriNumbers[current++]
-    }
-    throw new Error('No more Maori numbers')
-  }
-
   void context
 
   return class extends target {
-    _value = generator().next().value as string
+    private _current = 0
+
+    constructor(...args: any[]) {
+      super(...args)
+      this._value = this.generator().next().value as string
+    }
+
+    private *generator() {
+      while (this._current < maoriNumbers.length) {
+        yield maoriNumbers[this._current++]
+      }
+      throw new Error('No more Maori numbers')
+    }
   }
 }
 
