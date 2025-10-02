@@ -1,5 +1,11 @@
 const maoriNumbers = ['tahi', 'rua', 'toru', 'wha']
-
+let current = 0
+function* generator() {
+  while (current < maoriNumbers.length) {
+    yield maoriNumbers[current++]
+  }
+  throw new Error('No more Maori numbers')
+}
 
 function maoriSequence(
   target: typeof Number,
@@ -8,19 +14,7 @@ function maoriSequence(
   void context
 
   return class extends target {
-    private _current = 0
-
-    constructor(...args: any[]) {
-      super(...args)
-      this._value = this.generator().next().value as string
-    }
-
-    private *generator() {
-      while (this._current < maoriNumbers.length) {
-        yield maoriNumbers[this._current++]
-      }
-      throw new Error('No more Maori numbers')
-    }
+    _value = generator().next().value as string
   }
 }
 
