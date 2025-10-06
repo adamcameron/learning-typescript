@@ -19,7 +19,7 @@ export async function logSomeThens() {
       lapToConsole('In fourth then')
     })
     .catch(() => {
-      lapToConsole('In catch (should not see this')
+      lapToConsole('In catch (should not see this)')
     })
   lapToConsole('After thens')
   return response
