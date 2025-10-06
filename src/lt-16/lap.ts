@@ -8,6 +8,6 @@ export const lapToConsole = function (message: string) {
   if (startTime === undefined) {
     reset()
   }
-  const elapsed = new Date().valueOf() - startTime!
+  const elapsed = new Date().valueOf() - (startTime ?? 0)
   console.log(`(${elapsed}ms) ${message}`)
 }
