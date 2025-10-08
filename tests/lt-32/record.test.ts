@@ -1,7 +1,7 @@
 import { MaoriNumbers } from '@/lt-32/record'
 import { describe, expect, it } from 'vitest'
 
-describe('Testing omit types', () => {
+describe('Testing record types', () => {
   it('can be a type', () => {
     const mi: MaoriNumbers = {
       one: { value: 1, name: 'tahi' },
