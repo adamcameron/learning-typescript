@@ -1,5 +1,5 @@
 import { logSomeThens } from '@/lt-16/thens'
-import { toHaveLogSequence } from './logMatchers'
+import { toHaveLogSequence } from '../shared/logMatchers'
 import { describe, expect, it, vi, beforeAll } from 'vitest'
 
 describe('Testing then behaviour', () => {
