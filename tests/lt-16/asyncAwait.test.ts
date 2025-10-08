@@ -1,6 +1,6 @@
 import { justFetches } from '@/lt-16/asyncAwait'
-import { toHaveLogSequence } from './logMatchers'
-import { lapToConsole, reset } from '@/lt-16/lap'
+import { toHaveLogSequence } from '../shared/logMatchers'
+import { lapToConsole, reset } from '@/shared/lap'
 import { describe, expect, it, vi, beforeAll, beforeEach } from 'vitest'
 
 describe('Testing async/await behaviour', () => {

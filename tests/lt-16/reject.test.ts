@@ -1,7 +1,7 @@
 import { willBeRejected, willBeRejectedWithoutException } from '@/lt-16/reject'
-import { toHaveLogSequence } from './logMatchers'
-import { lapToConsole, reset } from '@/lt-16/lap'
-import { ResponseError } from '@/lt-16/ResponseError'
+import { toHaveLogSequence } from '../shared/logMatchers'
+import { lapToConsole, reset } from '@/shared/lap'
+import { ResponseError } from '@/shared/ResponseError'
 import { describe, expect, it, vi, beforeAll, beforeEach } from 'vitest'
 
 describe('Testing reject behaviour', () => {

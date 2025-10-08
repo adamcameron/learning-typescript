@@ -1,4 +1,4 @@
-import { toHaveLogSequence, toHaveLogEntry } from './logMatchers'
+import { toHaveLogSequence, toHaveLogEntry } from '../shared/logMatchers'
 import { describe, expect, it, vi, beforeAll } from 'vitest'
 
 describe('Testing logging matchers', () => {

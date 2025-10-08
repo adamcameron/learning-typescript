@@ -1,5 +1,5 @@
-import { lapToConsole } from './lap'
-import { ResponseError } from './ResponseError'
+import { lapToConsole } from '../shared/lap'
+import { ResponseError } from '../shared/ResponseError'
 
 export async function willBeRejected() {
   lapToConsole('Start')

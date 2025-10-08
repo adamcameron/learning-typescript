@@ -1,6 +1,6 @@
 import { failingCall } from '@/lt-16/catch'
-import { toHaveLogSequence, toHaveLogEntry } from './logMatchers'
-import { reset } from '@/lt-16/lap'
+import { toHaveLogSequence, toHaveLogEntry } from '../shared/logMatchers'
+import { reset } from '@/shared/lap'
 import { describe, expect, it, vi, beforeAll, beforeEach } from 'vitest'
 
 describe('Testing catch behaviour', () => {

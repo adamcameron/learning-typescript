@@ -1,4 +1,4 @@
-import { lapToConsole } from './lap'
+import { lapToConsole } from '../shared/lap'
 
 export async function failingCall() {
   lapToConsole('Start')
