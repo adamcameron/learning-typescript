@@ -102,7 +102,7 @@ export class MaoriNumber {
 
   // type predicates
   isValid(value: string): value is valids {
-    return ['tahi', 'rua', 'toru', 'wha'].indexOf(value) > 0
+    return ['tahi', 'rua', 'toru', 'wha'].indexOf(value) !== -1
   }
 }
 
