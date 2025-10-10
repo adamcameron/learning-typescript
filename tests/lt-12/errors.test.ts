@@ -99,7 +99,7 @@ describe('testing errors', () => {
       if (e instanceof AssertionError) {
         throw e
       }
-      if (typeof e == 'string') {
+      if (typeof e === 'string') {
         expect(e).toEqual('my string error message')
         return
       }
