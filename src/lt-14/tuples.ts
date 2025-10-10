@@ -34,7 +34,7 @@ export function returnsWithOptionalThirdElement(
   en: string,
   mi?: string
 ): [number, string, string?] {
-  return typeof mi == 'string' ? [value, en, mi] : [value, en]
+  return typeof mi === 'string' ? [value, en, mi] : [value, en]
 }
 
 export type TranslationsTuple = [number: number, english: string, maori: string]

@@ -11,5 +11,5 @@ export type boolable =
   | symbol
 
 export function isBooleanValue(b1: boolable, b2: boolean): boolean {
-  return Boolean(b1) == b2
+  return Boolean(b1) === b2
 }
