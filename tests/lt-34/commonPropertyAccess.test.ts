@@ -8,7 +8,7 @@ import {
 import { describe, expect, it } from 'vitest'
 
 describe('Tests common property access', () => {
-  it('Demonstrates common property access constrains', () => {
+  it('Demonstrates common property access constraints', () => {
     const value: MaoriNumber = new MaoriNumber('rua tekau ma wha', 24)
     expect(value.inMi()).toEqual('rua tekau ma wha')
 
