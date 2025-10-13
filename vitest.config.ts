@@ -10,7 +10,7 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html'],
-      exclude: ['./src/shared/waiter.ts'],
+      exclude: ['./src/typescript-learning/shared/waiter.ts', '**/*.d.ts'],
     },
   },
 })
