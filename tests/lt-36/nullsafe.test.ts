@@ -80,10 +80,10 @@ describe('Tests of null-safe operators', () => {
   })
 
   it("won't allow usage of unchecked null-possible value", () => {
-    const holder: Holder | null = Holder.chanceYerArm()
+    const holder: Holder | null = Holder.chanceYerArm(false)
 
     const nullSafeResult = holder?.doer // const nullSafeResult: Doer | null | undefined
-    expect(nullSafeResult).toBeNull()
+    expect(nullSafeResult).toBeUndefined()
 
     //const unsafeResult = holder.doer // 'holder' is possibly 'null'
   })

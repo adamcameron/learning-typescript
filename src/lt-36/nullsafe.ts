@@ -1,9 +1,9 @@
 export class Holder {
   public doer: Doer | null = null
 
-  public static chanceYerArm(): Holder | null {
+  public static chanceYerArm(gimme: boolean): Holder | null {
     // flip a coin: heads they get a new Holder
-    return Math.random() > 0.5 ? new Holder() : null
+    return gimme ? new Holder() : null
   }
 }
 
@@ -13,7 +13,7 @@ export class Doer {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
-export type FunctionLibraryObject = Record<string, Function>
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type FunctionLibraryObject = Record<string, (...args: any[]) => any>
 
 export type VO = Record<string, any> // eslint-disable-line @typescript-eslint/no-explicit-any
