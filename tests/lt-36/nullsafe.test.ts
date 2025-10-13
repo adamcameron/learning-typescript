@@ -29,7 +29,7 @@ describe('Tests of null-safe operators', () => {
     const vo: VO = {}
 
     vo.a = null
-    expect(vo?.[2]).toBeUndefined()
+    expect(vo.a?.[2]).toBeUndefined()
 
     vo.a = ['tahi']
 
