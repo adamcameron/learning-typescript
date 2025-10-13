@@ -1,0 +1,8 @@
+import { describe, it, expect } from 'vitest'
+import { add } from '@/typescript-learning/lt-8/math'
+
+describe('add function', () => {
+  it('should return 3 when adding 1 and 2', () => {
+    expect(add(1, 2)).toBe(3)
+  })
+})
