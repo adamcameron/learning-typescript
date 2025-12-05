@@ -30,8 +30,6 @@ describe('Testing reject behaviour', () => {
     })
     lapToConsole('After catch')
 
-    console.dir(consoleSpy.mock.calls)
-
     expect(consoleSpy).toHaveLogSequence([
       /\(\d{1,2}ms\) After thens/,
       /\(\d{1,2}ms\) After willBeRejected/,
