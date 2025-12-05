@@ -68,7 +68,7 @@ function logAuth(logger: Logger = defaultLogger) {
         logger.log(`User ${userName} authenticated successfully`)
         return result
       } catch (e) {
-        logger.log(`Authentication failed for user ${userName}: ${e}`)
+        logger.log(`Authentication failed for user ${userName}: ${String(e)}`)
         throw e
       }
     }

@@ -1,8 +1,10 @@
 {
   "name": "learning-typescript",
   "version": "0.1.0",
+  "type": "module",
   "dependencies": {
-    "@types/node": "^24.3.1"
+    "@types/node": "^24.3.1",
+    "nodemon": "^3.1.10"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
@@ -18,6 +20,8 @@
     "vitest": "^3.2.4"
   },
   "scripts": {
+    "dev": "tsc && node src/typescript-learning/shared/waiter.ts",
+    "lint:watch": "nodemon --watch src --ext ts,tsx --exec 'npx eslint --no-cache'",
     "test": "vitest --typecheck",
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui --coverage --api.host 0.0.0.0",
