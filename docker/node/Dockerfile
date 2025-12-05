@@ -6,6 +6,7 @@ RUN echo "alias cls='clear; printf \"\033[3J\"'" >> ~/.bashrc
 RUN ["apt-get", "update"]
 RUN ["apt-get", "install", "-y", "zip", "unzip", "git", "vim"]
 
+# this is needed for vitest's UI server, otherwise we get spawn xdg-open ENOENT error
 RUN ["apt-get", "install", "xdg-utils", "-y"]
 
 WORKDIR  /usr/src/app

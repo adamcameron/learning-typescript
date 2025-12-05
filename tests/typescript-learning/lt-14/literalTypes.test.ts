@@ -101,4 +101,24 @@ describe('Literal type tests', () => {
     const runtimeKey: string = 'pl'
     expect(o.getAnyPropByName(runtimeKey as 'mi' | 'en' | 'ie')).toBeUndefined()
   })
+
+  describe('numeric literal types with math operations', () => {
+    it('can increment a value-constrainted-typed value as a number', () => {
+      type oneToFour = 1 | 2 | 3 | 4
+      const initialValue: oneToFour = 2
+      const newNumberValue = initialValue + 1
+
+      expect(newNumberValue).toEqual(3)
+    })
+
+    /* NB: does not compile
+    it('can increment a value-constrainted-typed value as a type-literal value', () => {
+      type oneToFour = 1 | 2 | 3 | 4
+      const initialValue: oneToFour = 2
+      const newTypedValue: oneToFour = initialValue + 1 // Type 'number' is not assignable to type 'oneToFour'
+
+      expect(newTypedValue).toEqual(3)
+    })
+      */
+  })
 })
